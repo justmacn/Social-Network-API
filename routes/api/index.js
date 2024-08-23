@@ -1,4 +1,4 @@
-// require both user and thought routes
+// entry point for both user and thought routes
 const router = require('express').Router();
 const userRoutes = require('./user-routes');
 const thoughtRoutes = require('./thought-routes');

@@ -1,3 +1,4 @@
+// require thought controller functions to call on route requests
 const router = require('express').Router();
 const {
   getAllThoughts,
