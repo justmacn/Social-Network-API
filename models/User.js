@@ -1,5 +1,6 @@
 const { Schema, model } = require('mongoose');
 
+// creates model schema for all user documents in the collection
 const userSchema = new Schema(
   {
     username: {
@@ -41,6 +42,7 @@ userSchema.virtual('friendCount').get(function () {
   return this.friends.length;
 });
 
+// new instance of the model to create the 'users' collection and link the schema
 const User = model('User', userSchema);
 
 module.exports = User;

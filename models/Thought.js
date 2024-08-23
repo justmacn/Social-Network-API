@@ -2,6 +2,7 @@ const { Schema, model } = require('mongoose');
 const reactionSchema = require('./Reaction');
 const dateFormat = require('../utils/dateFormat');
 
+// creates model schema for all thought documents in the collection
 const thoughtSchema = new Schema(
   {
     thoughtText: {
@@ -35,6 +36,7 @@ thoughtSchema.virtual('reactionCount').get(function () {
   return this.reactions.length;
 });
 
+// new instance of the model to create the 'thoughts' collection and link the schema
 const Thought = model('Thought', thoughtSchema);
 
 module.exports = Thought;

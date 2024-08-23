@@ -1,6 +1,7 @@
 const { Schema, Types } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
 
+// creates model schema for all reaction documents in db
 const reactionSchema = new Schema(
   {
     reactionId: {
